@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Bretterbude - Schreinerei</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f1ec;
+            text-align: center;
+        }
+
+        header {
+            background-color: #5c3a21;
+            color: white;
+            padding: 30px;
+        }
+
+        nav {
+            margin: 20px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            background-color: #8b5e34;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #6f4727;
+        }
+
+        section {
+            padding: 30px;
+        }
+
+        .anmeldung {
+            background-color: #ffffff;
+            margin: 20px auto;
+            padding: 20px;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 5px;
+            right: 10px;
+            font-size: 10px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bretterbude</h1>
+    <p>Ihre moderne Schreinerei fuer Qualitaet und Handwerk</p>
+</header>
+
+<nav>
+    <button onclick="zeigeStart()">Startseite</button>
+    <button onclick="zeigeInfo()">Ueber uns</button>
+    <button onclick="zeigeAnmeldung()">Lehrling anmelden</button>
+</nav>
+
+<section id="content">
+    <h2>Willkommen bei der Bretterbude</h2>
+    <p>Wir sind eine kreative Schreinerei mit Leidenschaft fuer Holz, Design und praezise Handarbeit.</p>
+</section>
+
+<footer>
+    Wir haben uns die Muehe gemacht eine kleine Webseite zu machen (Extrapunkt?)
+</footer>
+
+<script>
+    function zeigeStart() {
+        document.getElementById("content").innerHTML = `
+            <h2>Willkommen bei der Bretterbude</h2>
+            <p>Wir sind eine kreative Schreinerei mit Leidenschaft fuer Holz, Design und praezise Handarbeit.</p>
+        `;
+    }
+
+    function zeigeInfo() {
+        document.getElementById("content").innerHTML = `
+            <h2>Ueber uns</h2>
+            <p>Die Bretterbude ist eine moderne Schreinerei.</p>
+            <p>Wir stellen Moebel, Tueren und Spezialanfertigungen aus Holz her.</p>
+            <p>Handwerk, Praezision und Teamarbeit stehen bei uns im Mittelpunkt.</p>
+        `;
+    }
+
+    function zeigeAnmeldung() {
+        document.getElementById("content").innerHTML = `
+            <div class="anmeldung">
+                <h2>Lehrling anmelden</h2>
+                <input type="text" placeholder="Vorname"><br>
+                <input type="text" placeholder="Nachname"><br>
+                <input type="email" placeholder="E-Mail"><br>
+                <button onclick="absenden()">Anmelden</button>
+            </div>
+        `;
+    }
+
+    function absenden() {
+        alert("Vielen Dank fuer deine Anmeldung bei der Bretterbude!");
+    }
+</script>
+
+</body>
+</html>
